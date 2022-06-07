@@ -1,0 +1,29 @@
+{
+  "name": "glowing-potato",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/KarzanBotani/glowing-potato#readme",
+  "bugs": {
+    "url": "https://github.com/KarzanBotani/glowing-potato/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarzanBotani/glowing-potato.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "start:dev": "nodemon --watch src src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
