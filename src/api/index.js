@@ -3,9 +3,9 @@ import { Router } from 'express';
 import { clientRouter } from './client.js';
 import { webhookRouter } from './webhook.js';
 
-const api = Router();
+const router = Router();
 
-api.use(clientRouter);
-api.use(webhookRouter);
+router.use('/client', clientRouter);
+router.use('/webhook', webhookRouter);
 
-export { api };
+export { router as apiRouter };

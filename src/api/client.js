@@ -3,7 +3,7 @@ import { sendCall } from '../utils.js';
 
 const router = Router();
 
-router.post('/client/:id', async (req, res) => {
+router.post('/:id', async (req, res) => {
   const { id } = req.params;
   const result = await sendCall(id);
   res.status(201).json(result);
