@@ -1,16 +1,16 @@
-const results = {};
+const pendingCalls = {};
 
-export async function callService (clientId) {
+export async function sendCall (clientId) {
   return new Promise((resolve) => {
-    results[clientId] = resolve;
+    pendingCalls[clientId] = resolve;
   });
 }
 
-export function resolveResult (clientId, body) {
-  results[clientId](body);
-  delete results[clientId];
+export function resolveCall (clientId, body) {
+  pendingCalls[clientId](body);
+  delete pendingCalls[clientId];
 }
 
 export function isPending (clientId) {
-  return clientId in results;
+  return clientId in pendingCalls;
 }
